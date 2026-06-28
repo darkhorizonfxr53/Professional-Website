@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Default style for light mode */
+    .icon-shape {
+      fill: #111111;
+    }
+    
+    /* CSS Media query to detect dark mode */
+    @media (prefers-color-scheme: dark) {
+      .icon-shape {
+        fill: #F5F5F5;
+      }
+    }
+  </style>
+  <!-- Your icon geometry here -->
+  <circle class="icon-shape" cx="50" cy="50" r="40" />
+</svg>
