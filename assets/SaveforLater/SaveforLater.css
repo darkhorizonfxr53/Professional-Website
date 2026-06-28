@@ -1,0 +1,290 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+/* ============================= */
+/* 2. NAVIGATION */
+/* ============================= */
+
+.navbar {
+    background-color: var(--navbar);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(1000px);
+    padding: 30px 0;
+    transition: all 0.4s ease;
+}
+
+.nav-links{
+    justify-self: end;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.logo {
+    color: #64ffda;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #64ffda;
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.navbar.shrink .logo-img {
+    width: 40px;
+    height: 40px;
+}
+.page-title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-self: end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #64ffda;
+}
+
+/* ============================= */
+/* 3. Shrunk navbar */
+/* ============================= */
+.navbar.shrink {
+    padding: 12px 0;
+}
+
+.navbar.shrink .logo {
+    font-size: 1rem;
+}
+
+.navbar.shrink .page-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+.navbar.shrink .nav-links{
+    gap: 20px;
+}
+
+/* ---------------- HERO ---------------- */
+.about-hero {
+    background: linear-gradient(135deg, var(--hero), var(--navbar));
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ---------------- RESOURCES GRID ---------------- */
+.resources-main {
+    padding: 70px 10%;
+    background-color: #ffffff; /* White background like About page */
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.resource-card {
+    background-color: #f0f4f8; /* Soft grey card background */
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e0e6ed;
+}
+
+.img-box {
+    width: 100%;
+    height: 100px;
+    background: white;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.img-box img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.resource-card h3 {
+    color: #0a192f; /* Dark navy for headings */
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: #444444; /* Readable grey for descriptions */
+    font-size: 1rem;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #64ffda;
+}
+
+/* ============================= */
+/* FOOTER (FIXED + PROFESSIONAL) */
+/* ============================= */
+
+.footer {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background-color: var(--navbar);
+    color: white;
+}
+
+.footer-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #64ffda;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    color: #d7d7d7;
+    margin-bottom: 25px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-social a,
+.footer-social a:link,
+.footer-social a:visited {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* hover effect */
+.footer-social a:hover,
+.footer-social a:hover i {
+    color: #64ffda;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* prevent ugly visited colors */
+.footer-social a:visited {
+    color: white;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #d7d7d7;
+    opacity: 0.9;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: translateY(-4px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-divider {
+    width: 60%;
+    margin: 60px auto;
+    border: none;
+    border-top: 2px solid #e0e6ed;
+}

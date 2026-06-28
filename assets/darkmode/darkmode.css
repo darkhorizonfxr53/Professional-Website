@@ -1,0 +1,225 @@
+/* =========================================
+   THEME VARIABLES (LIGHT)
+========================================= */
+@import url("../icons/icons.css");
+:root {
+    --bg: #eef2f7;
+    --surface: #ffffff;
+    --surface-2: #f8fafc;
+    --text: #0f172a;
+    --text-light: #475569;
+
+    --navbar: #0a192f;
+    --hero: #112240;
+
+    --border: #e5e7eb;
+    --accent: #64ffda;
+
+    --shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================
+   DARK MODE VARIABLES
+========================================= */
+html.dark-mode,
+body.dark-mode {
+    --bg: #0f172a;
+    --surface: #172554;
+    --surface-2: #1e293b;
+    --text: #f8fafc;
+    --text-light: #cbd5e1;
+
+    --navbar: #020617;
+    --hero: #020617;
+
+    --border: #334155;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================
+   GLOBAL APPLY
+========================================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* =========================================
+   NAVBAR + LOGO + TOGGLE LAYOUT
+========================================= */
+.navbar {
+    background: var(--navbar);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-self: start;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.about-hero {
+    background: linear-gradient(135deg, var(--hero), var(--navbar));
+}
+
+/* =========================================
+   CARDS / SECTIONS (SHARED)
+========================================= */
+.skills-section,
+.timeline-section,
+.contact-section,
+.contact-card,
+.skill-card,
+.about-main,
+.section-card,
+.overview-panel,
+.overview-section,
+.timeline-item,
+.resources-main,
+.resource-card,
+.comment-section,
+.comment-card,
+.form-container,
+.cv-section,
+.cv-viewer,
+.widget,
+.sidebar {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.skills-section,
+.skill-card,
+.contact-card,
+.section-card,
+.overview-panel,
+.resource-card,
+.comment-card,
+.form-container,
+.timeline-item {
+    box-shadow: var(--shadow);
+}
+
+/* Alternate section backgrounds */
+html.dark-mode .timeline-section,
+body.dark-mode .timeline-section {
+    background-color: var(--surface-2);
+}
+
+html.dark-mode .about-main,
+html.dark-mode .resources-main,
+html.dark-mode .comment-section,
+body.dark-mode .about-main,
+body.dark-mode .resources-main,
+body.dark-mode .comment-section {
+    background-color: var(--bg);
+}
+
+html.dark-mode .skills-section,
+body.dark-mode .skills-section {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+html.dark-mode .skill-card,
+body.dark-mode .skill-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+}
+
+html.dark-mode .resource-card,
+body.dark-mode .resource-card {
+    background-color: var(--surface-2);
+}
+
+html.dark-mode .img-box,
+body.dark-mode .img-box {
+    background: var(--surface);
+}
+
+/* text contrast */
+.skill-desc p,
+.timeline-item p,
+.about-description p,
+.contact-item p,
+.resource-card p,
+.resource-card h3,
+.about-description h2,
+.section-card h2,
+.overview-panel p,
+.cv-section p {
+    color: var(--text-light);
+}
+
+html.dark-mode .resource-card h3,
+html.dark-mode .about-description h2,
+html.dark-mode .section-card h2,
+body.dark-mode .resource-card h3,
+body.dark-mode .about-description h2,
+body.dark-mode .section-card h2 {
+    color: var(--text);
+}
+
+html.dark-mode .skill-card h3::after,
+body.dark-mode .skill-card h3::after {
+    color: var(--text-light);
+}
+
+html.dark-mode .section-divider,
+body.dark-mode .section-divider {
+    border-top-color: var(--border);
+}
+
+html.dark-mode .about-hero a,
+body.dark-mode .about-hero a {
+    color: var(--accent);
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: var(--surface-2);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer,
+.footer {
+    background: var(--navbar);
+    color: white;
+}
+
+/* =========================================
+   DARK MODE TOGGLE BUTTON
+========================================= */
+.dark-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.dark-toggle:hover {
+    background: rgba(100, 255, 218, 0.15);
+    transform: scale(1.1);
+}
